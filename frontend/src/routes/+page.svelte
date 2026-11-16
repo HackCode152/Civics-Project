@@ -11,7 +11,10 @@
 		ikeMoments
 	} from '../lib/data';
 
-	const tomatometer = 75; // overall rating, justified in the critics section
+	// Overall rating = average of the critics' star scores, as a percentage of 5 stars
+	const scored = reviews.filter((r) => r.score);
+	const avgStars = scored.reduce((sum, r) => sum + parseFloat(r.score!), 0) / scored.length;
+	const tomatometer = Math.round((avgStars / 5) * 100);
 	const approval = 65; // Eisenhower's average Gallup approval rating across his presidency
 
 	let synopsisOpen = $state(false);
@@ -361,31 +364,6 @@
 					{/each}
 				</div>
 
-				<div class="verdict-box">
-					<div class="cert">
-						{@render tomato(70)}
-						<div>
-							<span class="cert-label">CERTIFIED FRESH</span>
-							<strong class="cert-score">{tomatometer}%</strong>
-						</div>
-					</div>
-					<div>
-						<h3>Why Ike Gets a {tomatometer}%</h3>
-						<p>
-							Eisenhower's biggest wins — the Interstate Highway
-							System, ending the Korean War, creating NASA, enforcing desegregation at Little Rock, and the
-							first civil rights laws since Reconstruction — still shape America today. He kept the country
-							prosperous and at peace through some of the most dangerous years of the Cold War.
-						</p>
-						<p>
-							But he loses points for secret CIA coups in Iran and Guatemala, for staying silent too long
-							on McCarthyism while gay federal workers were purged, for lying about the U-2 spy plane, and
-							for pulling America into Vietnam. Historians agree he was one of the best: C-SPAN's 2021 survey
-							of presidential historians ranked him <strong>#5 of all presidents</strong>. That's a
-							<strong>Certified Fresh</strong> presidency.
-						</p>
-					</div>
-				</div>
 			</section>
 
 		</main>
@@ -1097,42 +1075,6 @@
 		margin: 8px 0;
 		line-height: 1.5;
 	}
-	.verdict-box {
-		margin-top: 30px;
-		display: grid;
-		grid-template-columns: auto 1fr;
-		gap: 28px;
-		border: 2px solid #fa320a;
-		border-radius: 12px;
-		padding: 24px;
-		background: #fff8f6;
-	}
-	.cert {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		gap: 6px;
-	}
-	.cert > div {
-		display: flex;
-		flex-direction: column;
-	}
-	.cert-label {
-		font-family: 'Oswald', sans-serif;
-		color: #fa320a;
-		letter-spacing: 1px;
-	}
-	.cert-score {
-		font-size: 2rem;
-	}
-	.verdict-box h3 {
-		margin: 0 0 8px;
-	}
-	.verdict-box p {
-		line-height: 1.55;
-		margin: 0 0 10px;
-	}
 
 	.rating {
 		display: flex;
@@ -1325,8 +1267,7 @@
 			grid-template-columns: 1fr;
 		}
 		.info-list div,
-		.review,
-		.verdict-box {
+		.review {
 			grid-template-columns: 1fr;
 		}
 	}
