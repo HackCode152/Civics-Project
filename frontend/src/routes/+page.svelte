@@ -306,14 +306,15 @@
 				<h2 class="sec-title">News &amp; Interviews for Dwight D. Eisenhower</h2>
 				<div class="news-grid">
 					{#each news as n}
-						<article class="news">
+						<a class="news" href={n.url} target="_blank" rel="noopener">
 							<img src={n.img} alt="" loading="lazy" />
 							<div>
-								<span class="news-kind">{n.kind} · {n.date}</span>
+								<span class="news-kind">{n.kind} · {n.source}</span>
 								<h3>{n.headline}</h3>
 								<p>{n.blurb}</p>
+								<span class="read-more">Read article →</span>
 							</div>
-						</article>
+						</a>
 					{/each}
 				</div>
 			</section>
@@ -986,6 +987,16 @@
 		height: 90px;
 		object-fit: cover;
 		border-radius: 4px;
+	}
+	.read-more {
+		display: inline-block;
+		margin-top: 8px;
+		color: #3976dc;
+		font-weight: 600;
+		font-size: 0.9rem;
+	}
+	.news:hover h3 {
+		text-decoration: underline;
 	}
 	.news-kind {
 		font-size: 0.75rem;

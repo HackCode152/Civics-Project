@@ -60,64 +60,24 @@ export const photos: Photo[] = [
 	{ src: 'img/farewell.jpg', caption: 'Farewell Address, January 17, 1961' }
 ];
 
-export type News = { date: string; kind: string; headline: string; blurb: string; img: string };
+export type News = { kind: string; source: string; headline: string; blurb: string; img: string; url: string };
 
 export const news: News[] = [
 	{
-		date: 'Nov 4, 1952',
-		kind: 'Box Office',
-		headline: 'Ike Opens Big: Wins 39 States and 442 Electoral Votes',
-		blurb: 'Running on "Korea, Communism, and Corruption," the war hero ends 20 straight years of Democratic control of the White House, beating Adlai Stevenson with 55% of the popular vote.',
-		img: 'img/election-1952.png'
+		kind: 'Article',
+		source: 'Gale In Context: U.S. History',
+		headline: 'Dwight D. Eisenhower',
+		blurb: 'A topic overview of Eisenhower\u2019s life, military career, and presidency. (Requires school login.)',
+		img: 'img/ike-dday.jpg',
+		url: 'https://go.gale.com/ps/retrieve.do?tabID=Reference&resultListType=RESULT_LIST&searchResultsType=MultiTab&retrievalId=9bd5043b-8534-46f5-a9bf-7fe7793d4a3a&hitCount=8&gtmSearchId=20ac5b3f-9b88-497f-bf11-31c4f6cab2ab&searchType=BasicSearchForm&currentPosition=1&docId=GALE%7CEJ1667500336&docType=Topic+overview&sort=Relevance&contentSegment=ZXAA-MOD1&prodId=UHIC&pageNum=1&contentSet=GALE%7CEJ1667500336&searchId=R1&userGroupName=wiltonhs&inPS=true'
 	},
 	{
-		date: 'July 27, 1953',
-		kind: 'News',
-		headline: 'Korean War Armistice Signed Six Months Into Ike’s Term',
-		blurb: 'Keeping his campaign promise to "go to Korea," Eisenhower pushes for an armistice that stops the fighting, though no permanent peace treaty is ever signed.',
-		img: 'img/armistice.jpg'
-	},
-	{
-		date: 'Jan 19, 1955',
-		kind: 'Interview',
-		headline: 'First Televised Presidential Press Conference',
-		blurb: 'Eisenhower becomes the first president to allow TV cameras into his press conferences, opening the presidency to millions of viewers at home.',
-		img: 'img/ike-portrait.jpg'
-	},
-	{
-		date: 'June 29, 1956',
-		kind: 'News',
-		headline: 'Federal-Aid Highway Act Signed: 41,000 Miles of Interstate',
-		blurb: 'Inspired by Germany’s autobahns and his 1919 Army convoy across the country, Ike launches the biggest public works project in American history.',
-		img: 'img/interstate-plan.jpg'
-	},
-	{
-		date: 'Sept 24, 1957',
-		kind: 'Interview',
-		headline: 'Ike Addresses the Nation on Little Rock, Sends the 101st Airborne',
-		blurb: 'After Gov. Orval Faubus blocks nine Black students from Central High School, Eisenhower federalizes the Arkansas National Guard to enforce Brown v. Board.',
-		img: 'img/little-rock.jpg'
-	},
-	{
-		date: 'July 29, 1958',
-		kind: 'News',
-		headline: 'Responding to Sputnik, Ike Signs Law Creating NASA',
-		blurb: 'Months later the National Defense Education Act pours money into science, math, and foreign-language education.',
-		img: 'img/sputnik.jpg'
-	},
-	{
-		date: 'May 1960',
-		kind: 'News',
-		headline: 'U-2 Spy Plane Shot Down; Cover Story Collapses',
-		blurb: 'The administration claims a lost "weather plane" — until Khrushchev reveals the pilot is alive. The Paris peace summit falls apart.',
-		img: 'img/u2.jpg'
-	},
-	{
-		date: 'Jan 17, 1961',
-		kind: 'Interview',
-		headline: 'Farewell Address Warns of the "Military-Industrial Complex"',
-		blurb: 'In one of the most famous presidential farewells ever, the five-star general warns Americans against the unchecked power of the defense industry.',
-		img: 'img/farewell.jpg'
+		kind: 'Article',
+		source: 'Eisenhower Presidential Library',
+		headline: 'The Eisenhowers: Dwight David Eisenhower Chronology',
+		blurb: 'A timeline of Ike\u2019s life, from his birth in Denison, Texas, and boyhood in Abilene, Kansas, to West Point, World War II, and the White House.',
+		img: 'img/ike-portrait.jpg',
+		url: 'https://www.eisenhowerlibrary.gov/eisenhowers'
 	}
 ];
 
