@@ -263,14 +263,6 @@ export const reviews: Review[] = [
 	}
 ];
 
-export const audience: { name: string; text: string; stars: number }[] = [
-	{ name: 'Factory worker, Detroit (1956)', text: 'Steady job, new car, new highway outside town. I like Ike!', stars: 5 },
-	{ name: 'Korean War veteran (1953)', text: 'He said he would go to Korea and he did. My unit came home.', stars: 5 },
-	{ name: 'Student, Little Rock (1957)', text: 'He finally sent the troops, but it took weeks of us being turned away before he acted.', stars: 3 },
-	{ name: 'Federal employee (1954)', text: 'Lost my State Department job in the purges. Ike stayed quiet while McCarthy ran wild.', stars: 1 },
-	{ name: 'Suburban mom, Ohio (1958)', text: 'After Sputnik my kids are getting real science classes now. Good call.', stars: 4 }
-];
-
 export const elections = [
 	{
 		year: 1952,

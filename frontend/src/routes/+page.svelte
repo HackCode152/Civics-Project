@@ -6,7 +6,6 @@
 		photos,
 		news,
 		reviews,
-		audience,
 		elections,
 		explore,
 		ikeMoments
@@ -156,7 +155,7 @@
 							<div>
 								<div class="pct">{approval}%</div>
 								<div class="label">Popcornmeter</div>
-								<a href="#audience" class="sub">Avg. Gallup Approval</a>
+								<span class="sub">Avg. Gallup Approval</span>
 							</div>
 						</div>
 					</div>
@@ -391,24 +390,6 @@
 				</div>
 			</section>
 
-			<!-- Audience -->
-			<section id="audience">
-				<h2 class="sec-title">Audience Reviews (Voices of the 1950s)</h2>
-				<div class="audience-grid">
-					{#each audience as a}
-						<div class="aud">
-							<div class="stars" aria-label="{a.stars} out of 5 stars">
-								{#each Array(5) as _, i}<span class:dim={i >= a.stars}>★</span>{/each}
-							</div>
-							<p>"{a.text}"</p>
-							<span class="muted">— {a.name}</span>
-						</div>
-					{/each}
-				</div>
-				<p class="muted note">
-					Audience reviews are imagined reactions from Americans of the era, written for this project.
-				</p>
-			</section>
 		</main>
 
 		<!-- ===== Sidebar (What to Watch -> Ike's Top Moments) ===== -->
@@ -1190,33 +1171,6 @@
 	.verdict-box p {
 		line-height: 1.55;
 		margin: 0 0 10px;
-	}
-
-	/* Audience */
-	.audience-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-		gap: 14px;
-	}
-	.aud {
-		border: 1px solid #e2e2e2;
-		border-radius: 10px;
-		padding: 14px;
-	}
-	.aud p {
-		margin: 8px 0;
-		line-height: 1.45;
-	}
-	.stars {
-		color: #ffb600;
-		letter-spacing: 2px;
-	}
-	.stars .dim {
-		color: #ddd;
-	}
-	.note {
-		margin-top: 12px;
-		font-style: italic;
 	}
 
 	/* Sidebar */
