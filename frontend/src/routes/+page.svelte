@@ -162,13 +162,12 @@
 
 					<div class="synopsis" class:open={synopsisOpen}>
 						<p>
-							A small-town Kansas boy becomes the five-star general who led the D-Day invasion, then is
-							drafted by a hopeful nation to run for president. As the Cold War heats up, "Ike" must end
-							a bloody stalemate in Korea, outmaneuver Soviet leader Nikita Khrushchev, face down a
-							defiant governor in Little Rock, answer the shock of Sputnik, and pave America from coast to
-							coast — all while secret CIA operations and a downed spy plane threaten to unravel his
-							reputation. In the final scene, the old soldier delivers a warning about the
-							"military-industrial complex" that still echoes today.
+							Dwight Eisenhower went from growing up in a small town in Kansas to becoming a five-star general
+							who led the D-Day invasion and eventually became president. During his presidency, he dealt
+							with the Cold War, the Korean War, tensions with the Soviet Union, and the launch of Sputnik.
+							He also faced challenges involving civil rights and helped create the Interstate Highway
+							System, connecting the country from coast to coast. Before leaving office, he warned
+							Americans about the growing influence of the military-industrial complex.
 						</p>
 						<button class="chev" onclick={() => (synopsisOpen = !synopsisOpen)} aria-label="Toggle synopsis">
 							<svg width="18" height="18" viewBox="0 0 24 24"
@@ -180,10 +179,14 @@
 					<div class="consensus">
 						<h3>Critics Consensus</h3>
 						<p>
-							A steady, quietly brilliant performance: Eisenhower ends a war, builds the Interstates,
-							launches America into space, and enforces desegregation at Little Rock — though covert
-							coups, a reluctant stand against McCarthyism, and the U-2 cover-up keep this presidency just
-							short of perfect.
+							Dwight Eisenhower was an effective president who maintained peace during the Cold War,
+							strengthened the economy, and created the Interstate Highway System. He demonstrated strong
+							leadership and worked well with Congress and both political parties. However, critics argue
+							that he did not always act quickly enough on important issues, especially civil rights.
+							Overall, Eisenhower provided stability, encouraged progress, and left a positive impact on
+							the country. Eisenhower was not considered an imperial president because he generally
+							respected the balance of power, although his secret CIA operations raised some concerns
+							about presidential secrecy and authority.
 						</p>
 					</div>
 
