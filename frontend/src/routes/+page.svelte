@@ -153,8 +153,9 @@
 							{@render popcorn(58)}
 							<div>
 								<div class="pct">{approval}%</div>
-								<div class="label">Popcornmeter</div>
-								<span class="sub">Avg. Gallup Approval</span>
+								<div class="label">Avg. Approval Rating</div>
+								<span class="sub">Gallup Poll, 1953–1961</span>
+								<span class="range">High 79% · Low 48%</span>
 							</div>
 						</div>
 					</div>
@@ -738,6 +739,11 @@
 	}
 	.label {
 		font-size: 0.95rem;
+	}
+	.range {
+		display: block;
+		font-size: 0.8rem;
+		color: #757a84;
 	}
 	.sub {
 		color: #3976dc;
