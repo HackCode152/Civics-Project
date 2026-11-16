@@ -288,26 +288,10 @@ export const explore = [
 ];
 
 // Sidebar ("What to Watch" -> "Ike's Top Moments"): Eisenhower-only highlights, scored.
-export const ikeMoments = {
-	'Presidency': [
-		{ name: 'Interstate Highway System', score: 96 },
-		{ name: 'Korean War Armistice', score: 88 },
-		{ name: 'Creating NASA', score: 90 },
-		{ name: 'Little Rock Nine', score: 80 },
-		{ name: 'Farewell Address', score: 94 }
-	],
-	'Controversies': [
-		{ name: 'CIA Coup in Iran', score: 18 },
-		{ name: 'U-2 Cover Story', score: 25 },
-		{ name: 'Lavender Scare (EO 10450)', score: 12 },
-		{ name: 'Slow to Confront McCarthy', score: 30 },
-		{ name: 'Vietnam Commitment', score: 28 }
-	],
-	'Before Office': [
-		{ name: 'D-Day Invasion (1944)', score: 98 },
-		{ name: 'Supreme Allied Commander', score: 95 },
-		{ name: 'Army Chief of Staff', score: 78 },
-		{ name: 'Columbia University President', score: 62 },
-		{ name: 'First NATO Commander', score: 85 }
-	]
-} as Record<string, { name: string; score: number }[]>;
+export const ikeMoments: { name: string; score: number }[] = [
+	{ name: 'Interstate Highway System', score: 96 },
+	{ name: 'Korean War Armistice', score: 88 },
+	{ name: 'Creating NASA', score: 90 },
+	{ name: 'Little Rock Nine', score: 80 },
+	{ name: 'Farewell Address', score: 94 }
+];

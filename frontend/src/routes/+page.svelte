@@ -19,7 +19,6 @@
 	let watchlisted = $state(false);
 	let activeVideo = $state<string | null>(null);
 	let activePhoto = $state<number | null>(null);
-	let sidebarTab = $state('Presidency');
 	let reviewFilter = $state<'all' | 'fresh' | 'rotten'>('all');
 
 	const shownReviews = $derived(
@@ -396,14 +395,10 @@
 		<aside>
 			<div class="side-card">
 				<h2>Ike's Top Moments</h2>
-				<div class="tabs">
-					{#each Object.keys(ikeMoments) as tab}
-						<button class:active={sidebarTab === tab} onclick={() => (sidebarTab = tab)}>{tab}</button>
-					{/each}
-				</div>
+				<p class="muted side-sub">The Presidency</p>
 				<div class="side-head"><strong>Highest Rated</strong><a href="#critics">VIEW ALL</a></div>
 				<ul class="side-list">
-					{#each ikeMoments[sidebarTab] as p}
+					{#each ikeMoments as p}
 						<li>
 							{#if p.score >= 60}{@render tomato(26)}{:else}{@render splat(26)}{/if}
 							<div>
@@ -1066,8 +1061,7 @@
 		display: flex;
 		gap: 8px;
 	}
-	.filters button,
-	.tabs button {
+	.filters button {
 		background: transparent;
 		border: 0;
 		border-radius: 8px;
@@ -1075,8 +1069,7 @@
 		font-weight: 600;
 		font-size: 0.92rem;
 	}
-	.filters button.on,
-	.tabs button.active {
+	.filters button.on {
 		background: #2a2c32;
 		color: #fff;
 	}
@@ -1189,12 +1182,10 @@
 		font-size: 1.6rem;
 		font-weight: 600;
 	}
-	.tabs {
-		display: flex;
-		gap: 4px;
+	.side-sub {
+		margin: -10px 0 0;
 		padding-bottom: 14px;
 		border-bottom: 1px solid #dcdcdc;
-		flex-wrap: wrap;
 	}
 	.side-head {
 		display: flex;
