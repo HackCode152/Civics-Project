@@ -371,7 +371,7 @@
 		<!-- ===== Sidebar (What to Watch -> Ike's Top Moments) ===== -->
 		<aside>
 			<div class="side-card">
-				<h2>Ike's Top Moments</h2>
+				<h2>Dwight D. Eisenhower's Top Moments</h2>
 				<p class="muted side-sub">The Presidency</p>
 				<div class="side-head"><strong>Highest Rated</strong><a href="#critics">VIEW ALL</a></div>
 				<ul class="side-list">
