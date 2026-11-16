@@ -414,29 +414,9 @@
 				</ul>
 			</div>
 
-			<div class="side-card">
-				<h2>Quick Facts</h2>
-				<ul class="facts">
-					<li><strong>34th</strong> President</li>
-					<li><strong>5-star</strong> General of the Army</li>
-					<li><strong>41,000</strong> miles of Interstate authorized</li>
-					<li><strong>2</strong> landslide election wins</li>
-					<li><strong>#5</strong> in C-SPAN 2021 historian ranking</li>
-				</ul>
-			</div>
 		</aside>
 	</div>
 
-	<footer>
-		<p>
-			<strong>Rotten Tomatoes: Presidential Edition</strong> — a Civics class project reviewing the
-			presidency of Dwight D. Eisenhower. Not affiliated with Rotten Tomatoes or Fandango.
-		</p>
-		<p class="muted">
-			Photos: public domain, via Wikimedia Commons / U.S. National Archives. Videos embedded from
-			YouTube. Scores are the author's own ratings, based on the critic reviews above.
-		</p>
-	</footer>
 </div>
 
 <!-- ===== Video modal ===== -->
@@ -1223,24 +1203,7 @@
 		flex-direction: column;
 		font-size: 1.05rem;
 	}
-	.facts {
-		margin: 0;
-		padding-left: 18px;
-		line-height: 1.9;
-	}
-	.facts strong {
-		color: #fa320a;
-	}
 
-	footer {
-		background: #2a2c32;
-		color: #fff;
-		padding: 26px 36px;
-		font-size: 0.92rem;
-	}
-	footer .muted {
-		color: #b8bcc4;
-	}
 
 	/* Modals */
 	.modal {
