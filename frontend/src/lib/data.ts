@@ -5,12 +5,8 @@
 export type Video = { id: string; title: string; length: string; source: string };
 
 export const videos: Video[] = [
-	{ id: 'fQ7IKM-jiJI', title: "Official Trailer: Ike's D-Day Message", length: '1:48', source: 'The U.S. Army' },
-	{ id: 'YP7WaUPACuY', title: '"I Like Ike" — 1952 Campaign Ad', length: '1:01', source: 'New-York Historical Society' },
 	{ id: '2DxeLeginUQ', title: 'Atoms for Peace Speech (1953)', length: '10:31', source: 'Eisenhower Library' },
-	{ id: 'ZzT5v_ICU6I', title: 'Address on Little Rock Integration (1957)', length: '13:35', source: 'C-SPAN' },
 	{ id: 'OyBNmecVtdU', title: 'Farewell Address: "Military-Industrial Complex"', length: '16:15', source: 'Archive footage' },
-	{ id: 'XNPS4lzLXQ8', title: 'Behind the Scenes: Supreme Commander to President', length: '42:16', source: 'Biography' }
 ];
 
 export const info: [string, string][] = [
