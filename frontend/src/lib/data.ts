@@ -135,7 +135,8 @@ export const reviews: Review[] = [
 		critic: 'Kaeleigh',
 		fresh: true,
 		topic: 'Interstate Highway System',
-		quote: "Critics praised Eisenhower's Interstate Highway System for improving transportation and boosting the economy. However, some criticized its high costs and the destruction of neighborhoods. Overall, it was a major achievement that also had negative effects on some communities."
+		quote: "Critics praised Eisenhower's Interstate Highway System for improving transportation and boosting the economy. However, some criticized its high costs and the destruction of neighborhoods. Overall, it was a major achievement that also had negative effects on some communities.",
+		score: '4.5/5'
 	},
 	{
 		critic: 'Hunter',

@@ -346,7 +346,16 @@
 									<span class="verdict" class:rotten={!r.fresh}>{r.fresh ? 'FRESH' : 'ROTTEN'}</span>
 								</div>
 								<p>{r.quote}</p>
-								{#if r.score}<span class="muted">Original Score: {r.score}</span>{/if}
+								{#if r.score}
+									{@const val = parseFloat(r.score)}
+									<div class="rating" aria-label="{r.score} stars">
+										<span class="star-row">
+											<span class="star-bg">★★★★★</span>
+											<span class="star-fill" style="width:{(val / 5) * 100}%">★★★★★</span>
+										</span>
+										<span class="rating-num">{r.score}</span>
+									</div>
+								{/if}
 							</div>
 						</div>
 					{/each}
@@ -1123,6 +1132,36 @@
 	.verdict-box p {
 		line-height: 1.55;
 		margin: 0 0 10px;
+	}
+
+	.rating {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin-top: 4px;
+	}
+	.star-row {
+		position: relative;
+		display: inline-block;
+		font-size: 1.5rem;
+		line-height: 1;
+		letter-spacing: 3px;
+	}
+	.star-bg {
+		color: #dcdcdc;
+	}
+	.star-fill {
+		position: absolute;
+		left: 0;
+		top: 0;
+		overflow: hidden;
+		white-space: nowrap;
+		color: #f5b301;
+		text-shadow: 0 1px 0 #c98f00;
+	}
+	.rating-num {
+		font-weight: 700;
+		color: #505257;
 	}
 
 	/* Sidebar */
