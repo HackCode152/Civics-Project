@@ -60,14 +60,13 @@ export const photos: Photo[] = [
 	{ src: 'img/farewell.jpg', caption: 'Farewell Address, January 17, 1961' }
 ];
 
-export type News = { kind: string; source: string; headline: string; blurb: string; img: string; url: string };
+export type News = { kind: string; source: string; headline: string; img: string; url: string };
 
 export const news: News[] = [
 	{
 		kind: 'Article',
 		source: 'Gale In Context: U.S. History',
-		headline: 'Dwight D. Eisenhower',
-		blurb: 'A topic overview of Eisenhower\u2019s life, military career, and presidency. (Requires school login.)',
+		headline: 'Interstate Highway Act',
 		img: 'img/ike-dday.jpg',
 		url: 'https://go.gale.com/ps/retrieve.do?tabID=Reference&resultListType=RESULT_LIST&searchResultsType=MultiTab&retrievalId=9bd5043b-8534-46f5-a9bf-7fe7793d4a3a&hitCount=8&gtmSearchId=20ac5b3f-9b88-497f-bf11-31c4f6cab2ab&searchType=BasicSearchForm&currentPosition=1&docId=GALE%7CEJ1667500336&docType=Topic+overview&sort=Relevance&contentSegment=ZXAA-MOD1&prodId=UHIC&pageNum=1&contentSet=GALE%7CEJ1667500336&searchId=R1&userGroupName=wiltonhs&inPS=true'
 	},
@@ -75,7 +74,6 @@ export const news: News[] = [
 		kind: 'Article',
 		source: 'Eisenhower Presidential Library',
 		headline: 'The Eisenhowers: Dwight David Eisenhower Chronology',
-		blurb: 'A timeline of Ike\u2019s life, from his birth in Denison, Texas, and boyhood in Abilene, Kansas, to West Point, World War II, and the White House.',
 		img: 'img/ike-portrait.jpg',
 		url: 'https://www.eisenhowerlibrary.gov/eisenhowers'
 	}

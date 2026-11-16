@@ -311,7 +311,6 @@
 							<div>
 								<span class="news-kind">{n.kind} · {n.source}</span>
 								<h3>{n.headline}</h3>
-								<p>{n.blurb}</p>
 								<span class="read-more">Read article →</span>
 							</div>
 						</a>
@@ -1009,12 +1008,6 @@
 		margin: 4px 0 6px;
 		font-size: 1.02rem;
 		line-height: 1.3;
-	}
-	.news p {
-		margin: 0;
-		font-size: 0.9rem;
-		line-height: 1.45;
-		color: #505257;
 	}
 
 	/* Critics */
