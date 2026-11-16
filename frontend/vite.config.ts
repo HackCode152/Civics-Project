@@ -16,7 +16,7 @@ export default defineConfig({
 			// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 			adapter: adapter({ fallback: '404.html' }),
 			// GitHub Pages serves this site from /Civics-Project
-			paths: { base: process.env.BASE_PATH ?? '' }
+			paths: { base: (process.env.BASE_PATH ?? '') as '' | `/${string}` }
 		})
 	]
 });

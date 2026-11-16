@@ -22,24 +22,12 @@
 	let activePhoto = $state<number | null>(null);
 	let sidebarTab = $state('Presidency');
 	let reviewFilter = $state<'all' | 'fresh' | 'rotten'>('all');
-	let search = $state('');
 
 	const shownReviews = $derived(
 		reviews.filter((r) =>
 			reviewFilter === 'all' ? true : reviewFilter === 'fresh' ? r.fresh : !r.fresh
 		)
 	);
-
-	const searchHits = $derived.by(() => {
-		const q = search.trim().toLowerCase();
-		if (q.length < 2) return [];
-		const items = [
-			...cast.map((c) => ({ label: c.name, sub: c.role, href: '#cast' })),
-			...news.map((n) => ({ label: n.headline, sub: n.date, href: '#news' })),
-			...reviews.map((r) => ({ label: r.topic, sub: r.fresh ? 'Fresh review' : 'Rotten review', href: '#critics' }))
-		];
-		return items.filter((i) => i.label.toLowerCase().includes(q)).slice(0, 6);
-	});
 
 	function onKey(e: KeyboardEvent) {
 		if (e.key === 'Escape') {
@@ -104,44 +92,6 @@
 			<span class="logo-word">Tomat{@render tomato(30)}es</span>
 			<span class="logo-ed">PRESIDENTIAL EDITION</span>
 		</a>
-
-		<div class="search">
-			<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"
-				><circle cx="10" cy="10" r="7" fill="none" stroke="#fff" stroke-width="2.5" /><path
-					d="M15 15l6 6"
-					stroke="#fff"
-					stroke-width="2.5"
-					stroke-linecap="round"
-				/></svg
-			>
-			<input type="search" placeholder="Search presidents, cast, events..." bind:value={search} />
-			{#if searchHits.length}
-				<ul class="search-results">
-					{#each searchHits as hit}
-						<li>
-							<a href={hit.href} onclick={() => (search = '')}>
-								<strong>{hit.label}</strong><span>{hit.sub}</span>
-							</a>
-						</li>
-					{/each}
-				</ul>
-			{/if}
-		</div>
-
-		<div class="nav-wrap">
-			<div class="nav-top">
-				<a href="#info">About Rotten Tomatoes®</a>
-				<a href="#critics">Critics</a>
-				<a href="#top">LOGIN/SIGNUP</a>
-			</div>
-			<nav class="nav-main">
-				<a href="#top">PAST PRESIDENTS</a>
-				<a href="#cast">CAST</a>
-				<a href="#explore" class="new-wrap"><span class="new">NEW</span>EXPLORE</a>
-				<a href="#news">NEWS</a>
-				<a href="#elections">ELECTIONS</a>
-			</nav>
-		</div>
 	</header>
 
 	<div class="trending">
@@ -574,7 +524,7 @@
 	.masthead {
 		background: #fa320a;
 		display: grid;
-		grid-template-columns: auto 1fr auto;
+		grid-template-columns: auto;
 		align-items: center;
 		gap: 36px;
 		padding: 18px 36px;
@@ -606,92 +556,6 @@
 		letter-spacing: 2px;
 		margin-top: 6px;
 		opacity: 0.9;
-	}
-	.search {
-		position: relative;
-		display: flex;
-		align-items: center;
-		gap: 10px;
-		background: #9e1f05;
-		border: 2px solid #fff;
-		border-radius: 28px;
-		padding: 10px 20px;
-		max-width: 620px;
-	}
-	.search input {
-		flex: 1;
-		background: transparent;
-		border: 0;
-		outline: 0;
-		color: #fff;
-		font-size: 1.15rem;
-		font-family: inherit;
-	}
-	.search input::placeholder {
-		color: #ffd9cf;
-	}
-	.search-results {
-		position: absolute;
-		top: calc(100% + 6px);
-		left: 0;
-		right: 0;
-		background: #fff;
-		color: #2a2c32;
-		list-style: none;
-		margin: 0;
-		padding: 6px 0;
-		border-radius: 8px;
-		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-		z-index: 20;
-	}
-	.search-results a {
-		display: flex;
-		flex-direction: column;
-		padding: 8px 16px;
-	}
-	.search-results a:hover {
-		background: #f3f3f3;
-	}
-	.search-results span {
-		font-size: 0.8rem;
-		color: #757a84;
-	}
-	.nav-wrap {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
-		gap: 14px;
-	}
-	.nav-top {
-		display: flex;
-		gap: 36px;
-		font-weight: 700;
-		font-size: 0.98rem;
-	}
-	.nav-main {
-		display: flex;
-		gap: 40px;
-		font-family: 'Oswald', sans-serif;
-		font-size: 1.3rem;
-		letter-spacing: 0.5px;
-	}
-	.nav-top a:hover,
-	.nav-main a:hover {
-		text-decoration: underline;
-	}
-	.new-wrap {
-		position: relative;
-	}
-	.new {
-		position: absolute;
-		top: -18px;
-		right: -14px;
-		background: #3976dc;
-		font-family: 'Libre Franklin', sans-serif;
-		font-size: 0.7rem;
-		padding: 1px 6px;
-		border-radius: 3px;
-		letter-spacing: 1px;
 	}
 	.trending {
 		background: #5c5c5c;
@@ -1487,13 +1351,6 @@
 
 	/* ---------- Responsive ---------- */
 	@media (max-width: 1150px) {
-		.masthead {
-			grid-template-columns: auto 1fr;
-		}
-		.nav-wrap {
-			grid-column: 1 / -1;
-			align-items: flex-start;
-		}
 		.layout {
 			grid-template-columns: 1fr;
 		}
@@ -1506,15 +1363,6 @@
 		}
 		.logo {
 			font-size: 2rem;
-		}
-		.nav-top {
-			gap: 16px;
-			font-size: 0.85rem;
-		}
-		.nav-main {
-			gap: 18px;
-			font-size: 1rem;
-			flex-wrap: wrap;
 		}
 		.hero {
 			min-height: 560px;
