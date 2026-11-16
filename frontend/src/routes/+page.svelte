@@ -232,7 +232,6 @@
 									<div class="bar"><div class="fill blue" style="width:{(el.opp.ev / 531) * 100}%"></div></div>
 									<span class="el-num">{el.opp.ev} EV · {el.opp.pv} · {el.opp.states} states</span>
 								</div>
-								<p class="muted">{el.note}</p>
 							</div>
 						</div>
 					{/each}
@@ -863,9 +862,6 @@
 	}
 	.el-num {
 		font-weight: 600;
-	}
-	.el-bars p {
-		margin: 4px 0 0;
 	}
 
 	/* Videos */

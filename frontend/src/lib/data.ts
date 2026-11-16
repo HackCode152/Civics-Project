@@ -158,14 +158,12 @@ export const elections = [
 	{
 		year: 1952,
 		ike: { ev: 442, pv: '55.2%', states: 39 },
-		opp: { name: 'Adlai Stevenson II (D)', ev: 89, pv: '44.3%', states: 9 },
-		note: 'Ended 20 years of Democratic presidents. Running mate: Richard Nixon.'
+		opp: { name: 'Adlai Stevenson II (D)', ev: 89, pv: '44.3%', states: 9 }
 	},
 	{
 		year: 1956,
 		ike: { ev: 457, pv: '57.4%', states: 41 },
-		opp: { name: 'Adlai Stevenson II (D)', ev: 73, pv: '42.0%', states: 7 },
-		note: 'A rematch — and an even bigger landslide, despite Ike’s 1955 heart attack.'
+		opp: { name: 'Adlai Stevenson II (D)', ev: 73, pv: '42.0%', states: 7 }
 	}
 ];
 
