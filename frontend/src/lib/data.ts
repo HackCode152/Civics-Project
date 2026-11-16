@@ -123,143 +123,33 @@ export const news: News[] = [
 
 export type Review = {
 	critic: string;
-	outlet: string;
 	fresh: boolean;
 	topic: string;
 	quote: string;
-	score: string;
+	score?: string;
 };
 
 // The critics section — this is where the rating is justified.
-// Each review weighs one major part of the presidency. Fresh = success, Rotten = failure.
 export const reviews: Review[] = [
 	{
-		critic: 'The Infrastructure Desk',
-		outlet: 'Civics Review',
+		critic: 'Kaeleigh',
 		fresh: true,
 		topic: 'Interstate Highway System',
-		quote: 'The Federal-Aid Highway Act of 1956 built 41,000 miles of interstate that still carry the American economy. Few presidential decisions have changed everyday life this much — trucking, suburbs, and road trips all trace back to Ike.',
-		score: '5/5'
+		quote: "Critics praised Eisenhower's Interstate Highway System for improving transportation and boosting the economy. However, some criticized its high costs and the destruction of neighborhoods. Overall, it was a major achievement that also had negative effects on some communities."
 	},
 	{
-		critic: 'Foreign Affairs Critic',
-		outlet: 'Civics Review',
+		critic: 'Hunter',
 		fresh: true,
-		topic: 'Ending the Korean War',
-		quote: 'He promised to end the war and he did, reaching an armistice within six months. The peninsula stayed divided, but the killing stopped — a promise kept.',
+		topic: 'Little Rock Crisis (1957)',
+		quote: "President Eisenhower ordered federal troops to enforce school desegregation in Little Rock, Arkansas, in 1957. President Dwight D. Eisenhower stepped in when nine African American students, known as the Little Rock Nine, were prevented from attending an all-white high school in Little Rock, Arkansas. Governor Orval Faubus used the National Guard to block the students from entering Central High School. Eisenhower responded by taking control of the Arkansas National Guard and sending 1,000 U.S. Army soldiers. Eisenhower's actions helped enforce school desegregation and showed that the federal government would step in when states refused to follow federal law. Eisenhower receives 4.75/5 stars for the Little Rock crisis of 1957.",
+		score: '4.75/5'
+	},
+	{
+		critic: 'Colin',
+		fresh: true,
+		topic: 'Foreign Affairs & Commander in Chief',
+		quote: "President Eisenhower ended multiple foreign affairs, including the Korean War, the moment he took office. Eisenhower guided the US through the Cold War with Russia, never risked national security, and held the best interests of the US military. However, Eisenhower loses some points for the number of coups he was a part of, including Guatemala and Iran. Overall, Eisenhower's handling as Commander in Chief was a strong suit of his presidency, even being a main reason why he was re-elected.",
 		score: '4.5/5'
-	},
-	{
-		critic: 'Science & Space Critic',
-		outlet: 'Civics Review',
-		fresh: true,
-		topic: 'Sputnik, NASA & Education',
-		quote: 'After Sputnik shocked the nation in 1957, Ike calmly created NASA (1958) and signed the National Defense Education Act, funding science and math in schools. The plot twist turned into a strong second act.',
-		score: '4/5'
-	},
-	{
-		critic: 'Civil Rights Critic',
-		outlet: 'Civics Review',
-		fresh: true,
-		topic: 'Little Rock (1957)',
-		quote: 'When Governor Faubus defied the Supreme Court, Eisenhower sent the 101st Airborne to escort the Little Rock Nine into Central High. It was the first time since Reconstruction federal troops protected Black citizens in the South — a powerful scene, even if he waited too long to act.',
-		score: '4/5'
-	},
-	{
-		critic: 'Legislation Critic',
-		outlet: 'Civics Review',
-		fresh: true,
-		topic: 'Civil Rights Acts of 1957 & 1960',
-		quote: 'The first civil rights laws passed by Congress since 1875, plus a new Civil Rights Division at the Justice Department. Watered down by Southern senators, yes — but they opened the door for the bigger laws of the 1960s.',
-		score: '3.5/5'
-	},
-	{
-		critic: 'Courts Critic',
-		outlet: 'Civics Review',
-		fresh: true,
-		topic: 'Supreme Court Appointments',
-		quote: 'Appointing Earl Warren as Chief Justice led directly to Brown v. Board of Education (1954). Ike reportedly regretted the pick later, but history rates it as one of the most important appointments ever.',
-		score: '4/5'
-	},
-	{
-		critic: 'Cold War Critic',
-		outlet: 'Civics Review',
-		fresh: true,
-		topic: 'Suez Crisis (1956)',
-		quote: 'Eisenhower pressured Britain, France, and Israel to withdraw from Egypt, refusing to back an invasion even by close allies. A rare moment where a superpower chose the rules over its friends.',
-		score: '4/5'
-	},
-	{
-		critic: 'Peace & Diplomacy Critic',
-		outlet: 'Civics Review',
-		fresh: true,
-		topic: 'Atoms for Peace & Restraint',
-		quote: 'His "Atoms for Peace" speech helped lead to the International Atomic Energy Agency. Through eight tense Cold War years, he kept America out of a major new war — no small feat for a general.',
-		score: '4/5'
-	},
-	{
-		critic: 'Economy Critic',
-		outlet: 'Civics Review',
-		fresh: true,
-		topic: 'Economy & Budgets',
-		quote: 'Steady growth, low inflation, and three balanced budgets. Ike also expanded Social Security and raised the minimum wage instead of dismantling the New Deal. Three recessions keep it from a perfect score.',
-		score: '3.5/5'
-	},
-	{
-		critic: 'Public Works Critic',
-		outlet: 'Civics Review',
-		fresh: true,
-		topic: 'St. Lawrence Seaway',
-		quote: 'Built with Canada and opened in 1959, the Seaway connected the Great Lakes to the Atlantic Ocean. Another solid infrastructure sequel.',
-		score: '3.5/5'
-	},
-	{
-		critic: 'Speechwriting Critic',
-		outlet: 'Civics Review',
-		fresh: true,
-		topic: 'Farewell Address (1961)',
-		quote: 'The "military-industrial complex" warning is one of the most quoted speeches in American history — a five-star general telling the country not to trust the war machine too much. A perfect ending.',
-		score: '5/5'
-	},
-	{
-		critic: 'Leadership Critic',
-		outlet: 'Civics Review',
-		fresh: true,
-		topic: 'Leadership Style',
-		quote: 'Critics in the 1950s called him a golf-playing grandpa, but his "hidden-hand" style got results quietly behind the scenes. The character is far smarter than he first appears.',
-		score: '4/5'
-	},
-	{
-		critic: 'Covert Ops Critic',
-		outlet: 'Civics Review',
-		fresh: false,
-		topic: 'CIA Coups in Iran & Guatemala',
-		quote: 'The CIA helped overthrow elected leaders in Iran (1953) and Guatemala (1954). These secret plots created anger and instability that haunted U.S. foreign policy for decades.',
-		score: '1.5/5'
-	},
-	{
-		critic: 'Civil Liberties Critic',
-		outlet: 'Civics Review',
-		fresh: false,
-		topic: 'McCarthyism & the Lavender Scare',
-		quote: 'Ike refused to publicly confront Senator McCarthy for far too long, and his Executive Order 10450 (1953) led to thousands of gay federal workers being fired. A dark subplot.',
-		score: '1.5/5'
-	},
-	{
-		critic: 'Honesty Critic',
-		outlet: 'Civics Review',
-		fresh: false,
-		topic: 'The U-2 Incident (1960)',
-		quote: 'The administration lied about the downed spy plane and got caught when the Soviets produced the pilot. It wrecked the Paris Summit and hurt trust in the presidency.',
-		score: '2/5'
-	},
-	{
-		critic: 'Southeast Asia Critic',
-		outlet: 'Civics Review',
-		fresh: false,
-		topic: 'The Domino Theory & Vietnam',
-		quote: 'His "falling dominoes" logic led the U.S. to back South Vietnam with money and military advisers, setting up the much bigger war his successors would fight.',
-		score: '2/5'
 	}
 ];
 

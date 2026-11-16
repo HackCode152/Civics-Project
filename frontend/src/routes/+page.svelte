@@ -11,21 +11,13 @@
 		ikeMoments
 	} from '../lib/data';
 
-	const freshCount = reviews.filter((r) => r.fresh).length;
-	const tomatometer = Math.round((freshCount / reviews.length) * 100);
+	const tomatometer = 75; // overall rating, justified in the critics section
 	const approval = 65; // Eisenhower's average Gallup approval rating across his presidency
 
 	let synopsisOpen = $state(false);
 	let watchlisted = $state(false);
 	let activeVideo = $state<string | null>(null);
 	let activePhoto = $state<number | null>(null);
-	let reviewFilter = $state<'all' | 'fresh' | 'rotten'>('all');
-
-	const shownReviews = $derived(
-		reviews.filter((r) =>
-			reviewFilter === 'all' ? true : reviewFilter === 'fresh' ? r.fresh : !r.fresh
-		)
-	);
 
 	function onKey(e: KeyboardEvent) {
 		if (e.key === 'Escape') {
@@ -332,24 +324,19 @@
 						{@render tomato(44)}
 						<div>
 							<div class="pct sm">{tomatometer}%</div>
-							<div class="muted">{freshCount} Fresh · {reviews.length - freshCount} Rotten</div>
+							<div class="muted">{reviews.length} Critic Reviews</div>
 						</div>
-					</div>
-					<div class="filters" role="tablist">
-						<button class:on={reviewFilter === 'all'} onclick={() => (reviewFilter = 'all')}>All Critics</button>
-						<button class:on={reviewFilter === 'fresh'} onclick={() => (reviewFilter = 'fresh')}>Fresh</button>
-						<button class:on={reviewFilter === 'rotten'} onclick={() => (reviewFilter = 'rotten')}>Rotten</button>
 					</div>
 				</div>
 
 				<div class="reviews">
-					{#each shownReviews as r}
+					{#each reviews as r}
 						<div class="review">
 							<div class="critic">
 								<div class="avatar">{r.critic[0]}</div>
 								<div>
 									<strong>{r.critic}</strong>
-									<span class="muted">{r.outlet}</span>
+									<span class="muted">Critic</span>
 								</div>
 							</div>
 							<div class="bubble">
@@ -359,7 +346,7 @@
 									<span class="verdict" class:rotten={!r.fresh}>{r.fresh ? 'FRESH' : 'ROTTEN'}</span>
 								</div>
 								<p>{r.quote}</p>
-								<span class="muted">Original Score: {r.score}</span>
+								{#if r.score}<span class="muted">Original Score: {r.score}</span>{/if}
 							</div>
 						</div>
 					{/each}
@@ -376,8 +363,7 @@
 					<div>
 						<h3>Why Ike Gets a {tomatometer}%</h3>
 						<p>
-							Out of {reviews.length} major parts of his presidency, {freshCount} were successes and
-							{reviews.length - freshCount} were failures. Eisenhower's biggest wins — the Interstate Highway
+							Eisenhower's biggest wins — the Interstate Highway
 							System, ending the Korean War, creating NASA, enforcing desegregation at Little Rock, and the
 							first civil rights laws since Reconstruction — still shape America today. He kept the country
 							prosperous and at peace through some of the most dangerous years of the Cold War.
@@ -1045,22 +1031,6 @@
 		flex-wrap: wrap;
 		gap: 16px;
 		margin-bottom: 18px;
-	}
-	.filters {
-		display: flex;
-		gap: 8px;
-	}
-	.filters button {
-		background: transparent;
-		border: 0;
-		border-radius: 8px;
-		padding: 9px 16px;
-		font-weight: 600;
-		font-size: 0.92rem;
-	}
-	.filters button.on {
-		background: #2a2c32;
-		color: #fff;
 	}
 	.reviews {
 		display: grid;
