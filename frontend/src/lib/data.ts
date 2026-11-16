@@ -106,6 +106,13 @@ export const reviews: Review[] = [
 		score: '4.75/5'
 	},
 	{
+		critic: 'Hunter',
+		fresh: true,
+		topic: 'Chief of Party',
+		quote: "As President, Dwight D. Eisenhower served as the leader of the Republican Party. He helped strengthen the party by supporting Republican candidates, campaigning for other Republicans, and improving the party's organization. He worked to make the Republican Party more modern and appeal to a wider range of voters, including moderates and independents. He also helped Republicans win the 1956 presidential election, winning 457 electoral votes against Democrat Adlai Stevenson. Eisenhower receives 4/5 stars for the chief of party role.",
+		score: '4/5'
+	},
+	{
 		critic: 'Colin',
 		fresh: true,
 		topic: 'Foreign Affairs & Commander in Chief',
