@@ -64,6 +64,13 @@ export type News = { kind: string; source: string; headline: string; img: string
 
 export const news: News[] = [
 	{
+		kind: 'Article',
+		source: 'Gale In Context: U.S. History',
+		headline: 'Interstate Highway Act',
+		img: 'img/interstate-plan.jpg',
+		url: 'https://go.gale.com/ps/retrieve.do?tabID=Reference&resultListType=RESULT_LIST&searchResultsType=MultiTab&retrievalId=9bd5043b-8534-46f5-a9bf-7fe7793d4a3a&hitCount=8&gtmSearchId=20ac5b3f-9b88-497f-bf11-31c4f6cab2ab&searchType=BasicSearchForm&currentPosition=1&docId=GALE%7CEJ1667500336&docType=Topic+overview&sort=Relevance&contentSegment=ZXAA-MOD1&prodId=UHIC&pageNum=1&contentSet=GALE%7CEJ1667500336&searchId=R1&userGroupName=wiltonhs&inPS=true'
+	},
+	{
 		kind: 'Biography',
 		source: 'The White House',
 		headline: 'Dwight D. Eisenhower',
