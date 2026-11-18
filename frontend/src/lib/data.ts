@@ -160,15 +160,6 @@ export const elections = [
 	}
 ];
 
-export const explore = [
-	{ name: 'Eisenhower Presidential Library', url: 'https://www.eisenhowerlibrary.gov/', tag: 'Official Archive' },
-	{ name: 'White House Biography', url: 'https://www.whitehouse.gov/about-the-white-house/presidents/dwight-d-eisenhower/', tag: 'WhiteHouse.gov' },
-	{ name: 'Miller Center — UVA', url: 'https://millercenter.org/president/eisenhower', tag: 'Presidential Scholars' },
-	{ name: 'Farewell Address Transcript', url: 'https://www.archives.gov/milestone-documents/president-dwight-d-eisenhowers-farewell-address', tag: 'National Archives' },
-	{ name: 'Dwight D. Eisenhower Memorial', url: 'https://www.nps.gov/ddem/index.htm', tag: 'National Park Service' },
-	{ name: 'Eisenhower — Wikipedia', url: 'https://en.wikipedia.org/wiki/Dwight_D._Eisenhower', tag: 'Encyclopedia' }
-];
-
 // Sidebar ("What to Watch" -> "Ike's Top Moments"): Eisenhower-only highlights, scored.
 export const ikeMoments: { name: string; score: number }[] = [
 	{ name: 'Interstate Highway System', score: 96 },

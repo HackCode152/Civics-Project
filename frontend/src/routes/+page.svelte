@@ -7,7 +7,6 @@
 		news,
 		reviews,
 		elections,
-		explore,
 		ikeMoments
 	} from '../lib/data';
 
@@ -90,7 +89,7 @@
 	<div class="trending">
 		<span class="trend-label">TRENDING ON RT</span>
 		<a href="#videos">Famous Speeches</a>
-		<a href="#explore">What to Read</a>
+		<a href="#news">What to Read</a>
 		<a href="#elections">Seen on the Ballot</a>
 		<a href="#critics">Presidential Rankings</a>
 	</div>
@@ -200,19 +199,6 @@
 				</div>
 			</div>
 
-			<!-- Explore Now (replaces "Watch it Now") -->
-			<section id="explore">
-				<h2 class="sec-title">Explore Now</h2>
-				<div class="explore-grid">
-					{#each explore as e}
-						<a class="explore-card" href={e.url} target="_blank" rel="noopener">
-							<span class="tag">{e.tag}</span>
-							<strong>{e.name}</strong>
-							<span class="go">Explore →</span>
-						</a>
-					{/each}
-				</div>
-			</section>
 
 			<!-- Elections (replaces "Tickets & Showtimes") -->
 			<section id="elections">
@@ -788,36 +774,6 @@
 	}
 
 	/* Explore */
-	.explore-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-		gap: 14px;
-	}
-	.explore-card {
-		display: flex;
-		flex-direction: column;
-		gap: 6px;
-		padding: 16px;
-		border: 1px solid #e2e2e2;
-		border-radius: 10px;
-		transition: box-shadow 0.15s, transform 0.15s;
-	}
-	.explore-card:hover {
-		box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-		transform: translateY(-2px);
-	}
-	.tag {
-		font-size: 0.72rem;
-		text-transform: uppercase;
-		letter-spacing: 1px;
-		color: #fa320a;
-		font-weight: 700;
-	}
-	.go {
-		color: #3976dc;
-		font-weight: 600;
-		font-size: 0.9rem;
-	}
 
 	/* Elections */
 	.elections {
