@@ -97,6 +97,13 @@ export const news: News[] = [
 		headline: 'The Eisenhowers: Dwight David Eisenhower Chronology',
 		img: 'img/ike-dday.jpg',
 		url: 'https://www.eisenhowerlibrary.gov/eisenhowers'
+	},
+	{
+		kind: 'Interview',
+		source: 'Sept 24, 1957',
+		headline: 'Ike Addresses the Nation on Little Rock, Sends the 101st Airborne',
+		img: 'img/little-rock.jpg',
+		url: 'https://www.archives.gov/milestone-documents/executive-order-10730'
 	}
 ];
 
