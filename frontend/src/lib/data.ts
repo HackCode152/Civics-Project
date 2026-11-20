@@ -120,14 +120,14 @@ export const reviews: Review[] = [
 	{
 		critic: 'Kaeleigh',
 		fresh: true,
-		topic: 'Interstate Highway System',
+		topic: 'Interstate Highway Act – Chief Legislator',
 		quote: "Critics praised Eisenhower's Interstate Highway System for improving transportation and boosting the economy. However, some criticized its high costs and the destruction of neighborhoods. Overall, it was a major achievement that also had negative effects on some communities.",
 		score: '4.5/5'
 	},
 	{
 		critic: 'Hunter',
 		fresh: true,
-		topic: 'Little Rock Crisis (1957)',
+		topic: 'Little Rock Nine – Chief Executive',
 		quote: "President Eisenhower ordered federal troops to enforce school desegregation in Little Rock, Arkansas, in 1957. President Dwight D. Eisenhower stepped in when nine African American students, known as the Little Rock Nine, were prevented from attending an all-white high school in Little Rock, Arkansas. Governor Orval Faubus used the National Guard to block the students from entering Central High School. Eisenhower responded by taking control of the Arkansas National Guard and sending 1,000 U.S. Army soldiers. Eisenhower's actions helped enforce school desegregation and showed that the federal government would step in when states refused to follow federal law. Eisenhower receives 4.75/5 stars for the Little Rock crisis of 1957.",
 		score: '4.75/5'
 	},
