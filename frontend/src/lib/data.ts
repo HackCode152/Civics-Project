@@ -132,11 +132,17 @@ export const reviews: Review[] = [
 		score: '4.75/5'
 	},
 	{
-		critic: 'Vidit',
+		critic: 'Hunter',
 		fresh: true,
 		topic: 'Chief of Party',
 		quote: "As President, Dwight D. Eisenhower served as the leader of the Republican Party. He helped strengthen the party by supporting Republican candidates, campaigning for other Republicans, and improving the party's organization. He worked to make the Republican Party more modern and appeal to a wider range of voters, including moderates and independents. He also helped Republicans win the 1956 presidential election, winning 457 electoral votes against Democrat Adlai Stevenson. Eisenhower receives 4/5 stars for the chief of party role.",
 		score: '4/5'
+	},
+	{
+		critic: 'Vidit',
+		fresh: true,
+		topic: 'Chief Diplomat',
+		quote: "Although U.S. and Chinese negotiations over the islands began in August 1955, the area remained a potential flashpoint. Congress had authorized Eisenhower to use all necessary force to prevent Communist advances. Eisenhower utilized the Formosa Resolution of 1955 to successfully deter Chinese Communist aggression in the Taiwan Strait while simultaneously restraining Nationalist leader Chiang Kai-shek from provoking a wider war. During his two terms, Eisenhower successfully navigated major Cold War tensions, including ending the fighting in the Korean War in 1953 through a negotiated armistice. He applied firm diplomatic boundaries during major global crises, such as refusing to intervene unilaterally during the 1956 Suez Crisis while working through the United Nations to restore stability (Office of the Historian)."
 	},
 	{
 		critic: 'Colin',
