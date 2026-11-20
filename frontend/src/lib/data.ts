@@ -142,7 +142,8 @@ export const reviews: Review[] = [
 		critic: 'Vidit',
 		fresh: true,
 		topic: 'Chief Diplomat',
-		quote: "As Chief Diplomat, President Eisenhower showed steady and careful leadership during some of the most dangerous moments of the Cold War. He ended the fighting in the Korean War in 1953 through a negotiated armistice, keeping one of his biggest campaign promises. When tensions rose in the Taiwan Strait, he used the Formosa Resolution of 1955 to deter Chinese Communist aggression while also holding back Nationalist leader Chiang Kai-shek from provoking a wider war. However, even after U.S. and Chinese negotiations began in August 1955, the area remained a potential flashpoint, showing that his diplomacy did not fully solve the problem. During the 1956 Suez Crisis, Eisenhower refused to intervene on his own and instead worked through the United Nations to restore stability (Office of the Historian). Overall, Eisenhower was a strong Chief Diplomat who kept the peace by balancing firmness with restraint."
+		quote: "As Chief Diplomat, Eisenhower showed steady leadership during the Cold War. He ended the fighting in Korea in 1953 through a negotiated armistice and used the Formosa Resolution of 1955 to deter Chinese Communist aggression while holding back Chiang Kai-shek from starting a wider war. During the 1956 Suez Crisis, he refused to intervene on his own and worked through the United Nations to restore stability (Office of the Historian). Eisenhower receives 4.75/5 stars as Chief Diplomat.",
+		score: '4.75/5'
 	},
 	{
 		critic: 'Colin',
